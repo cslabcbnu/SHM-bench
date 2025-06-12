@@ -23,11 +23,17 @@ Ensure you have the NUMA development libraries installed:
 ```bash
 sudo apt update
 sudo apt install libnuma-dev
+```
 
 ## Usage
 ```bash
 ./shmstress --size <size_in_mb> --threads <num_threads>
-
+```
 ## Arguments
 --size <size_in_mb>: Size of the shared memory region in megabytes (e.g., 512)
 --threads <num_threads>: Number of threads to spawn across NUMA nodes
+
+## Example
+``` bash
+./shmstress --size 1024 --threads 16
+````
